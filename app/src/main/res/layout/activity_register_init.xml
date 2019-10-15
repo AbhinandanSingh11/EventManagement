@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:id="@+id/ImageViewLayout"
+                android:layout_centerHorizontal="true">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileimage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_user"
+                    app:civ_border_color="@color/grey"
+                    app:civ_border_width="2dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ProgressBarInit"
+                    android:visibility="gone"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/profileimage"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_add_circle_black_24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="7dp"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/LinearLayoutUsername"
+                android:background="#e6e6e6"
+                android:layout_below="@id/ImageViewLayout">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_grey_less_bordered"
+                    android:drawableStart="@drawable/twotone_face_24"
+                    android:hint="@string/text_fullname"
+                    android:drawablePadding="10dp"
+                    android:inputType="text"
+                    android:maxLines="@integer/google_play_services_version"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey"
+                    android:id="@+id/fullnameInit"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/LinearLayoutFullname"
+                android:background="#e6e6e6"
+                android:layout_below="@id/LinearLayoutUsername">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_grey_less_bordered"
+                    android:drawableStart="@drawable/person_two_tone"
+                    android:hint="@string/text_username"
+                    android:drawablePadding="10dp"
+                    android:inputType="text"
+                    android:maxLines="@integer/google_play_services_version"
+                    android:textColor="@color/grey"
+                    android:textColorHint="@color/grey"
+                    android:id="@+id/usernameInit"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/LinearLayoutForgotPasswordText"
+                android:layout_below="@id/LinearLayoutFullname"
+                android:layout_marginTop="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/checkbox"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/text_terms"
+                        android:textStyle="normal"
+                        android:id="@+id/forgotpasswordLink"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_below="@id/LinearLayoutForgotPasswordText"
+                android:layout_marginTop="20dp"
+                android:id="@+id/DividerLine">
+
+                <ImageView
+                    android:id="@+id/heartSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_favorite_border_black_24dp"/>
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieHeartSignup"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:lottie_rawRes="@raw/animation_beating_heart"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_toStartOf="@id/heartSignup"
+                    android:background="@color/grey"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@id/heartSignup"
+                    android:background="@color/grey"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/LinearLayoutGoogleLogin"
+                android:layout_below="@id/DividerLine"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_grey_less_bordered"
+                    android:text="@string/text_save"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:id="@+id/save"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressCardView"
+                android:visibility="gone">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:lottie_rawRes="@raw/animation_cicle"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/animation_view"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please  wait while we save your details"
+            android:gravity="center"
+            android:id="@+id/txtProgress"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relL"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_setup_later"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_red"
+                android:text="@string/text_skip"
+                android:textColor="@color/white"
+                android:layout_marginStart="15dp"
+                android:id="@+id/skip"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/relL">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/twotone_pets_24"
+                android:layout_marginEnd="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10,000 hours so that I can be a fuckin'"
+                android:textStyle="italic"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" King"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/btn_join_the_minus_from_sign_in_page"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

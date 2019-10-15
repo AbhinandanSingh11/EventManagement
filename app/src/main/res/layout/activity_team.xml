@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/progressCardViewTeamView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/prr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/prr"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtProgressTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Saving your team details" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_favorite_black_24dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/TopToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/ImageBackTeamPage"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Team"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saveTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:text="@string/text_save"
+                android:textColor="@color/pink"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/DividerTopEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/TopToolBar"
+            android:background="@color/grey">
+
+        </View>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DividerTopEditProfile">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ProfileImgViewEditProfile"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/header"
+                        app:civ_border_color="@color/grey"
+                        app:civ_border_overlay="true"
+                        app:civ_border_width="2dp" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Live a few years of your life like nobody will so that you can spend the rest of your life like nobody can"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutTeamName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RelativeLayoutImage"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_face_24" />
+
+            <EditText
+                android:id="@+id/teamName"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/viewsix"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutTeamName"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextSix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewsix"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="This will be used as the official name of your team."
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextSix"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24" />
+
+            <EditText
+                android:id="@+id/memberOne"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:maxLines="@integer/google_play_services_version"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewone"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutName"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewone"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="Member one will considered as Team Leader"
+            android:textSize="10sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextOne"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24" />
+
+            <EditText
+                android:id="@+id/memberTwo"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:maxLines="@integer/google_play_services_version"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewtwo"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutEmail"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewtwo"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="Leave the filed Empty if you have less member the mentioned fields"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextTwo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24" />
+
+            <EditText
+                android:id="@+id/memberThree"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewthree"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutBio"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewthree"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter the emails by which you've registered for the Nasa Space Apps "
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextThree"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24" />
+
+            <EditText
+                android:id="@+id/memberFour"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewfour"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutUsername"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewfour"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="This will be visible to all the users and users can search you on NiMus through your username"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutUsernameNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextFour"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24" />
+
+            <EditText
+                android:id="@+id/memberFive"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginStart="15dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewfive"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutUsernameNew"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:id="@+id/TextFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewfive"
+            android:layout_marginStart="59dp"
+            android:layout_marginTop="10dp"
+            android:text="This will be visible to all the users and users can search you on NiMus through your username"
+            android:textSize="10sp"
+            tools:ignore="SmallSp" />
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/relL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/TextFive"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/twotone_pets_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10,000 hours so that I can be a fuckin'"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/btn_join_the_minus_from_sign_in_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text=" King"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

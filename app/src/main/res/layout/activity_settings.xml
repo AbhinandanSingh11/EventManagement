@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/TopToolBar">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:id="@+id/ImageBackSettings"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Privacy and Settings"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@+id/TopToolBar"
+            android:id="@+id/DividerTopEditProfile"
+            android:background="@color/grey">
+
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACCOUNT"
+            android:id="@+id/TextOneOne"
+            android:layout_below="@id/DividerTopEditProfile"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextOneOne"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutOne">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/person_two_tone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Manage My Account"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutOne"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutTwo">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_mail_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Privacy and Safety"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutTwo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutThree">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_share_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Share profile"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutThree"
+            android:background="@color/grey"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/viewOne">
+        </View>
+
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERAL"
+            android:id="@+id/TextTwoTwo"
+            android:layout_below="@id/viewOne"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextTwoTwo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutFour">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_notifications_none_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Push Notifications"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutFour"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutFive">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_g_translate_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Language"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutFive"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutSix">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_beach_access_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Digital Wellbeing"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutSix"
+            android:background="@color/grey"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/viewTwo">
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUPPORT"
+            android:id="@+id/TextThreeThree"
+            android:layout_below="@id/viewTwo"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextThreeThree"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutSeven">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_bug_report_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Report a Problem"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutSeven"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutEight">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_contact_support_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Help Center"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutEight"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutNine">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_warning_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Safety Center"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutNine"
+            android:background="@color/grey"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/viewThree">
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ABOUT"
+            android:id="@+id/TextFourFour"
+            android:layout_below="@id/viewThree"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="13sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TextFourFour"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutTen">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_import_contacts_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Terms of Use"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutTen"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutEleven">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_description_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Privacy Policy"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutEleven"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutTwelve">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_copyright_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Copyright Policy"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/LinearLayoutTwelve"
+            android:background="@color/grey"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/viewFour">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewFour"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutThirteen">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_person_add_disabled_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Log Out"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                android:id="@+id/TextLogOut"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LinearLayoutThirteen"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/LinearLayoutFourteen">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/twotone_delete_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Clear Cache"
+                android:layout_marginStart="15dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/button_style_rectangle_white"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0(201907032012)"
+            android:textColor="@color/grey"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout_below="@id/LinearLayoutFourteen"
+            android:layout_marginBottom="20dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>

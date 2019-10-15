@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:com="http://schemas.android.com/tools"
+    android:background="#f2f2f2">
+
+    <com.abhinandan.nimus.Custom.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Bottomlayout"
+        android:id="@+id/Container_main"
+        android:layout_above="@id/Bottomlayout">
+    </com.abhinandan.nimus.Custom.CustomViewPager>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_rounded_corners"
+        android:id="@+id/Bottomlayout">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/outline_account_circle_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/imgFour"
+            android:clickable="true"
+            android:focusable="true"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/twotone_account_balance_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="30dp"
+            android:id="@+id/imgOne"
+            android:clickable="true"
+            android:focusable="true"/>
+        <!--<ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@id/imgOne"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="50dp"
+            android:id="@+id/imgTwo"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/twotone_search_24"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/twotone_favorite_24"
+            app:layout_constraintEnd_toStartOf="@id/imgFour"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="50dp"
+            android:id="@+id/imgThree"
+            android:clickable="true"
+            android:focusable="true"/>
+            -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#ffc0cb"
+        android:src="@drawable/ic_add_black_24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/Fab"
+        android:visibility="visible"/>
+
+
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginStart="15dp"
+    app:cardCornerRadius="15dp"
+    android:id="@+id/bottomOptions"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Link"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:id="@+id/PostLink"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Photo"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:id="@+id/PostPhoto"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:id="@+id/PostVideo"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audio"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:id="@+id/PostAudio"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maybe Later"
+                android:textSize="14sp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style_pink_less_bordered"
+                android:layout_marginStart="10dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:id="@+id/ButtonOptionCancel"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

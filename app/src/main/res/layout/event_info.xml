@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/TopToolBar"
+        >
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:id="@+id/ImageBackInfoEvent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="Event Details"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/DividerTopEditProfile"
+        android:layout_below="@id/TopToolBar"
+        android:background="@color/grey">
+    </View>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:id="@+id/CardViewImageViewInfo"
+    android:layout_below="@id/DividerTopEditProfile">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ImageViewInfo"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/CardViewImageViewInfo"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:id="@+id/ContainerLinear">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/button_style_rectangle"
+            android:text="Tickets"
+            android:textColor="@color/white"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:id="@+id/ButtonQRGenerator"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/ButtonQRGenerator"
+            android:layout_marginStart="10dp"
+            android:id="@+id/ConsLOne">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/twotone_turned_in_24"
+                android:background="@drawable/btn_rectangle_outline_grey"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clickable="false"
+                android:id="@+id/ButtonOne"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/ButtonOne"
+                app:layout_constraintEnd_toEndOf="@id/ButtonOne"
+                app:layout_constraintTop_toBottomOf="@id/ButtonOne"
+                android:layout_marginTop="2dp"
+                android:id="@+id/hOne"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/ConsLOne"
+            android:layout_marginStart="10dp"
+            android:id="@+id/ConsLTwo">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/twotone_turned_in_24"
+                android:background="@drawable/btn_rectangle_outline_grey"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clickable="false"
+                android:id="@+id/ButtonTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/ButtonTwo"
+                app:layout_constraintEnd_toEndOf="@id/ButtonTwo"
+                app:layout_constraintTop_toBottomOf="@id/ButtonTwo"
+                android:layout_marginTop="2dp"
+                android:id="@+id/hTwo"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/ConsLTwo"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/ConsLThree">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:src="@drawable/twotone_turned_in_24"
+                android:background="@drawable/btn_rectangle_outline_grey"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clickable="false"
+                android:id="@+id/ButtonThree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/ButtonThree"
+                app:layout_constraintEnd_toEndOf="@id/ButtonThree"
+                app:layout_constraintTop_toBottomOf="@id/ButtonThree"
+                android:layout_marginTop="2dp"
+                android:id="@+id/hThree"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </RelativeLayout>
+
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/ContainerLinear"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal"
+      android:gravity="center"
+      android:id="@+id/LayoutThree">
+
+
+      <com.airbnb.lottie.LottieAnimationView
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          app:lottie_rawRes="@raw/animation_badge"
+          app:lottie_loop="true"
+          app:lottie_autoPlay="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_roundall"
+        android:id="@+id/textPost">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:id="@+id/hMain"/>
+    </LinearLayout>
+  </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LayoutThree"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/LayoutTitleEventInfo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/InfoTitleText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LayoutTitleEventInfo"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/LayoutTitleEventInfo"
+        android:orientation="horizontal"
+        android:id="@+id/LayoutInfoDate">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twotone_calendar_today_24"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/infoStartDate"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/infoEndDate"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LayoutInfoDate"
+        android:layout_marginTop="12dp"
+        android:layout_alignStart="@id/LayoutTitleEventInfo"
+        android:orientation="horizontal"
+        android:id="@+id/LayoutInfoVenue">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twotone_where_to_vote_24"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/infoVenue"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LayoutInfoVenue"
+        android:layout_marginTop="12dp"
+        android:layout_alignEnd="@id/LayoutTitleEventInfo"
+        android:layout_alignStart="@id/LayoutTitleEventInfo"
+        android:orientation="horizontal"
+        android:id="@+id/LayoutInfoDesc">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/twotone_import_contacts_24"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/infoDesc"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

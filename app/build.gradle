@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.abhinandan.nimus"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta2'
+
+    // Firebase Libraries
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:2.3.0'
+
+    // Firebase crashlytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+    // Android Support Libraries
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta05'
+
+    // Glide Libraries
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // Circular Image
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    // IOS Dialog
+    implementation 'com.gdacciaro:iosdialog:1.0.3'
+    implementation 'com.itlgl:iosdialog:1.0.0'
+
+    // Volley Library
+    implementation 'com.android.volley:volley:1.1.1'
+
+    // Android Support Library
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+    // Ripple Library
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+
+    // Facebook SDK
+    // implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    // Universal image loader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // dexter permissions
+    implementation "com.karumi:dexter:5.0.0"
+
+    // uCrop Library
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+
+    // One Sided cardView
+    implementation 'com.github.captain-miao:optroundcardview:1.0.0'
+
+    // Lottie
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+    // Ticket view
+    implementation 'com.vipulasri:ticketview:1.0.7'
+
+    //QR Code Generator
+    implementation 'androidmads.library.qrgenearator:QRGenearator:1.0.3'
+
+    //misc
+    implementation 'com.dmitrymalkovich.android:material-design-dimens:1.4'
+    implementation('com.thebluealliance:spectrum:0.7.1') {
+        exclude group: 'com.android.support'
+        exclude module: 'appcompat-v7'
+        exclude module: 'support-v4'
+    }
+
+
+    testImplementation 'junit:junit:4.13-beta-3'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
